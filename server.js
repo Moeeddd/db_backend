@@ -5,7 +5,15 @@ const listEndpoints = require("express-list-endpoints");
 
 const app = express();
 
-app.use(cors());
+// Secure CORS Configuration
+const corsOptions = {
+  // Allow requests from your Vercel URL (production) or localhost (development)
+  origin: process.env.FRONTEND_URL || "http://localhost:3000", 
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  credentials: true, // Allow cookies or authorization headers if needed
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/authRoutes"));
