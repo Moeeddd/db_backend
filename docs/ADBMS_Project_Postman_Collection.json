@@ -1,0 +1,60 @@
+{
+  "info": {
+    "name": "ADBMS Project API",
+    "_postman_id": "adbms-project",
+    "description": "Car Rental + Purchase System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api","auth","login"]
+        }
+      }
+    },
+    {
+      "name": "Register Customer",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register"
+        }
+      }
+    },
+    {
+      "name": "Add Vehicle (Admin)",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:5000/api/admin/add-vehicle"
+        }
+      }
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:5000/api/customer/booking"
+        }
+      }
+    },
+    {
+      "name": "Make Payment",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:5000/api/payment/pay"
+        }
+      }
+    }
+  ]
+}
